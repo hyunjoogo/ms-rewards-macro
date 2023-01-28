@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Container } from "react-bootstrap";
 import Inputs from "./Inputs";
 import Buttons from "./Buttons";
@@ -16,9 +16,9 @@ function App() {
   return (
     <Container>
       <h1 className="text-center py-2">MS-REWORD-MACRO</h1>
-      <IsEdge />
+      <IsEdge/>
       <div className="app">
-        <HowToUse />
+        <HowToUse/>
         <Inputs
           status={status}
           prefix={prefix}
