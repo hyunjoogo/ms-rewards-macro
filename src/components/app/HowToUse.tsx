@@ -8,14 +8,19 @@ const HowToUse = () => {
       <Accordion.Item eventKey="0">
         <Accordion.Header>사용법</Accordion.Header>
         <Accordion.Body>
-          <div>
-            <div>
-              <MobileSVG />
+          <ul>
+            <li>
+              <span className="text-danger fw-bold">팝업 차단을 해제해주세요!</span>
+            </li>
+            <li>
+              <MobileSVG/>
               <span>모바일 리워드 ➡️ 모바일 엣지 브라우저 </span>
-            </div>
-            <PCSVG />
-            <span>PC 리워드 ➡️ PC 엣지 브라우저 </span>
-          </div>
+            </li>
+            <li>
+              <PCSVG/>
+              <span>PC 리워드 ➡️ PC 엣지 브라우저 </span>
+            </li>
+          </ul>
           <ol>
             <li>검색할 횟수, 검색어를 입력해주세요</li>
             <li>검색버튼을 누르면 3초 뒤에 새창으로 검색을 시작합니다.</li>

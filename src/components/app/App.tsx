@@ -14,7 +14,7 @@ function App() {
   const [status, setStatus] = useState<StatusType>("waiting");
 
   return (
-    <Container>
+    <Container className="container">
       <h1 className="text-center py-2">MS-REWORD-MACRO</h1>
       <IsEdge/>
       <div className="app">
