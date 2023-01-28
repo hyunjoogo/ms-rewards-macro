@@ -1,5 +1,5 @@
 {
-  "name": "get-ms-reword",
+  "name": "ms-reword-macro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,10 +10,14 @@
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
+    "bootstrap": "^5.2.3",
+    "prettier": "^2.8.3",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
+    "react-iframe": "^1.8.5",
     "react-scripts": "5.0.1",
-    "typescript": "^4.4.2",
+    "typescript": "^4.9.4",
     "web-vitals": "^2.1.0"
   },
   "scripts": {
@@ -39,5 +43,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.32.0"
   }
 }

@@ -1,0 +1,18 @@
+.app {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.icon {
+  vertical-align: text-top;
+  margin-top: 1px;
+  margin-right: 5px;
+}
+.icon path {
+  fill: #767676;
+}
+.pc {
+  margin-top: 0px;
+}
