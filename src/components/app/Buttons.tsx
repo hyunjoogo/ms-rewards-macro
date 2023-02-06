@@ -13,6 +13,8 @@ interface ButtonsProps {
   maxCount: number;
 }
 
+const TIMEOUT_TIME = 2000;
+
 const Buttons: React.FC<ButtonsProps> = ({
   status,
   setStatus,
@@ -36,7 +38,7 @@ const Buttons: React.FC<ButtonsProps> = ({
     if (count !== 0 && count <= maxCount) {
       const timer = setTimeout(() => {
         handleNewTab();
-      }, 3000);
+      }, TIMEOUT_TIME);
       return () => clearTimeout(timer);
     }
   }, [count]);
@@ -71,7 +73,7 @@ const Buttons: React.FC<ButtonsProps> = ({
     const timer = setTimeout(() => {
       handleCloseNewTab();
       createNewSearchText();
-    }, 3000);
+    }, TIMEOUT_TIME);
     return () => clearTimeout(timer);
   };
 
