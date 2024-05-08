@@ -9,7 +9,6 @@ import HowToUse from "./HowToUse";
 export type StatusType = "waiting" | "progressing" | "complete" | "stop";
 
 function App() {
-  const [prefix, setPrefix] = useState<string>("");
   const [maxCount, setMaxCount] = useState<number>(0);
   const [status, setStatus] = useState<StatusType>("waiting");
 
@@ -21,15 +20,12 @@ function App() {
         <HowToUse/>
         <Inputs
           status={status}
-          prefix={prefix}
-          setPrefix={setPrefix}
           maxCount={maxCount}
           setMaxCount={setMaxCount}
         />
         <Buttons
           status={status}
           setStatus={setStatus}
-          prefix={prefix}
           maxCount={maxCount}
         />
       </div>
