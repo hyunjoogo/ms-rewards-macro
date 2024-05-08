@@ -13,7 +13,7 @@ interface ButtonsProps {
   maxCount: number;
 }
 
-const TIMEOUT_TIME = 2000;
+const TIMEOUT_TIME = 3000;
 
 const Buttons: React.FC<ButtonsProps> = ({
                                            status,
@@ -49,14 +49,9 @@ const Buttons: React.FC<ButtonsProps> = ({
   };
 
   function getRandomCharacter() {
-    // Get the length of the array.
     const koreanStringArray = wordList;
     const arrayLength = koreanStringArray.length;
-
-    // Choose a random index.
     const randomIndex = Math.floor(Math.random() * arrayLength);
-
-    // Choose a random character from the selected index string and return.
     return koreanStringArray[randomIndex].charAt(Math.floor(Math.random() * koreanStringArray[randomIndex].length));
   }
 
