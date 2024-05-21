@@ -1,5 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import {Button, Spinner, Stack} from 'react-bootstrap';
+import {Button, Form, Spinner, Stack} from 'react-bootstrap';
 import {StatusType} from './App';
 import {wordList} from '../word';
 
@@ -22,6 +22,7 @@ const Buttons: React.FC<ButtonsProps> = ({
                                          }) => {
   const [searchText, setSearchText] = useState('오버워치');
   const [count, setCount] = useState(0);
+  const [isMobile, setIsMobile] = useState(false)
   const newTabRef: NewTabRef = useRef(null);
 
   // const url = `https://www.bing.com/search?q=${searchText}&qs=ds&form=QBRE`;
@@ -56,7 +57,8 @@ const Buttons: React.FC<ButtonsProps> = ({
   }
 
   const handleOpenNewTab = () => {
-    newTabRef.current = window.open(url, '_blank');
+    const URL = isMobile ? `https://www.bing.com/search?q=${searchText}` : url;
+    newTabRef.current = window.open(URL, '_blank');
   };
   const handleCloseNewTab = () => {
     if (newTabRef.current) {
@@ -112,6 +114,13 @@ const Buttons: React.FC<ButtonsProps> = ({
   return (
     <div className="buttons">
       <Stack gap={3}>
+        <Form.Check // prettier-ignore
+          type="switch"
+          id="custom-switch"
+          label="Mobile 검색"
+          checked={isMobile}
+          onChange={() => setIsMobile(!isMobile)}
+        />
         <Button
           variant={renderStatusText().btnColor}
           size="lg"
