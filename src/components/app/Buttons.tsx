@@ -27,7 +27,7 @@ const Buttons: React.FC<ButtonsProps> = ({
 
   // const url = `https://www.bing.com/search?q=${searchText}&qs=ds&form=QBRE`;
   const url = `https://www.bing.com/news/search?q=${searchText}&qs=n&form=QBNT&sp=-1&lq=0&pq=${searchText}&sc=10-3&sk=&cvid=7EDA26C890DC474188DA9AE0BFFC2F9E&ghsh=0&ghacc=0&ghpl=`
-
+const moUrl = `https://www.bing.com/search?q=${searchText}&sk=HS3LT1&sc=10-2&cvid=3FFBC06E4A24434D92A00D4BBC38C09F&FORM=QBLH&sp=5&ghc=1&lq=0`
   useEffect(() => {
     if (status === 'stop') {
       return;
@@ -57,7 +57,7 @@ const Buttons: React.FC<ButtonsProps> = ({
   }
 
   const handleOpenNewTab = () => {
-    const URL = isMobile ? `https://www.bing.com/search?q=${searchText}` : url;
+    const URL = isMobile ? moUrl : url;
     newTabRef.current = window.open(URL, '_blank');
   };
   const handleCloseNewTab = () => {
