@@ -25,9 +25,9 @@ const Buttons: React.FC<ButtonsProps> = ({
   const [isMobile, setIsMobile] = useState(false)
   const newTabRef: NewTabRef = useRef(null);
 
-  // const url = `https://www.bing.com/search?q=${searchText}&qs=ds&form=QBRE`;
   const url = `https://www.bing.com/news/search?q=${searchText}&qs=n&form=QBNT&sp=-1&lq=0&pq=${searchText}&sc=10-3&sk=&cvid=7EDA26C890DC474188DA9AE0BFFC2F9E&ghsh=0&ghacc=0&ghpl=`
-const moUrl = `https://www.bing.com/search?q=${searchText}&sk=HS3LT1&sc=10-2&cvid=3FFBC06E4A24434D92A00D4BBC38C09F&FORM=QBLH&sp=5&ghc=1&lq=0`
+  const moUrl = `https://www.bing.com/search?q=${searchText}&form=QBLH&sp=-1&ghc=1&lq=0&pq=${searchText}&sc=11-3&qs=n&sk=&cvid=CA4F64D414BA4E2E9EADA81E45924DE3&ghsh=0&ghacc=0&ghpl=`
+
   useEffect(() => {
     if (status === 'stop') {
       return;
@@ -53,7 +53,7 @@ const moUrl = `https://www.bing.com/search?q=${searchText}&sk=HS3LT1&sc=10-2&cvi
     const koreanStringArray = wordList;
     const arrayLength = koreanStringArray.length;
     const randomIndex = Math.floor(Math.random() * arrayLength);
-    return koreanStringArray[randomIndex].charAt(Math.floor(Math.random() * koreanStringArray[randomIndex].length));
+    return koreanStringArray[randomIndex];
   }
 
   const handleOpenNewTab = () => {
