@@ -13,7 +13,8 @@ interface ButtonsProps {
   maxCount: number;
 }
 
-const TIMEOUT_TIME = 3000;
+const TIMEOUT_TIME = 5000;
+const MO_TIMEOUT_TIME = 7000;
 
 const Buttons: React.FC<ButtonsProps> = ({
                                            status,
@@ -74,7 +75,7 @@ const Buttons: React.FC<ButtonsProps> = ({
     const timer = setTimeout(() => {
       handleCloseNewTab();
       createNewSearchText();
-    }, TIMEOUT_TIME);
+    }, isMobile ? MO_TIMEOUT_TIME : TIMEOUT_TIME);
     return () => clearTimeout(timer);
   };
 
