@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <title>MS-REWORDS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #startButton {
+    width: 50%;
+    height: 10dvh;
+    font-size: 2rem;
+  }
+  #mobileCheckbox {
+    width: 30px;
+    height: 30px;
+  }
+  .inputWrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+</style>
+</head>
+
+<body>
+<iframe id="frame" width="100%" height="100%"> </iframe>
+<h1 id="browser"></h1>
+<h3 id="counter"></h3>
+
+<p>체크박스가 체크되어 있으면 모바일 버전으로 실행됩니다</p>
+<div class="inputWrapper">
+  <input type="checkbox" id="mobileCheckbox">
+  <label for="mobileCheckbox">모바일 버전 실행할까요?</label>
+</div>
+<button id="startButton">
+  <span id="statusText">시작</span>
+</button>
+<script type="module" src="src/main.ts"></script>
+</body>
+</html>
