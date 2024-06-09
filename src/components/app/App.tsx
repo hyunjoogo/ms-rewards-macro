@@ -3,7 +3,6 @@ import { Container } from "react-bootstrap";
 import Inputs from "./Inputs";
 import Buttons from "./Buttons";
 import "./style.css";
-import IsEdge from "./IsEdge";
 
 export type StatusType = "waiting" | "progressing" | "complete" | "stop";
 
@@ -14,7 +13,6 @@ function App() {
   return (
     <Container className="container">
       <h1 className="text-center py-2">MS-REWORD-MACRO</h1>
-      <IsEdge/>
       <div className="app">
         <Inputs
           status={status}
