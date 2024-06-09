@@ -13,7 +13,7 @@ const Inputs: React.FC<InputsProps> = ({
                                          maxCount,
                                          setMaxCount,
                                        }) => {
-  const LIMIT_COUNT = 30;
+  const LIMIT_COUNT = 50;
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;

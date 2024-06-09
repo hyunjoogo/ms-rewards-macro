@@ -14,7 +14,7 @@ interface ButtonsProps {
 }
 
 const TIMEOUT_TIME = 5000;
-const MO_TIMEOUT_TIME = 7000;
+const MO_TIMEOUT_TIME = 6000;
 
 const Buttons: React.FC<ButtonsProps> = ({
                                            status,

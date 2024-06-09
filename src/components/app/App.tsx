@@ -4,12 +4,11 @@ import Inputs from "./Inputs";
 import Buttons from "./Buttons";
 import "./style.css";
 import IsEdge from "./IsEdge";
-import HowToUse from "./HowToUse";
 
 export type StatusType = "waiting" | "progressing" | "complete" | "stop";
 
 function App() {
-  const [maxCount, setMaxCount] = useState<number>(0);
+  const [maxCount, setMaxCount] = useState<number>(50);
   const [status, setStatus] = useState<StatusType>("waiting");
 
   return (
@@ -17,7 +16,6 @@ function App() {
       <h1 className="text-center py-2">MS-REWORD-MACRO</h1>
       <IsEdge/>
       <div className="app">
-        <HowToUse/>
         <Inputs
           status={status}
           maxCount={maxCount}
